@@ -80,6 +80,8 @@ app.use(
     }),
 );
 
+export default app;
+
 // await new Promise<void>((resolve) => {
 //     try {
 //         httpServer.listen({ port: 4000 }, resolve);
