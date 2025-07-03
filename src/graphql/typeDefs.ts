@@ -142,4 +142,5 @@ const typeDefs = `#graphql
         createPost(createPostInput: CreatePostInput!): Post! @auth
     }
 `;
+
 export default typeDefs;
