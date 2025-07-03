@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "compile": "tsc",
-    "dev": "npm run compile && node ./server.js",
+    "dev": "npx tsx server.ts",
     "start": "npm run compile && node ./dist/index.js",
     "make:migration": "npx knex --knexfile knexfile.cjs migrate:make",
     "migrate": "npx knex --knexfile knexfile.cjs migrate:latest",
@@ -39,6 +39,7 @@
     "@types/multer": "^1.4.13",
     "@types/node": "^24.0.7",
     "@types/sqlite3": "^3.1.11",
+    "tsx": "^4.20.3",
     "typescript": "^5.8.3"
   }
 }

@@ -14,7 +14,7 @@ import { open, Database } from 'sqlite';
 
 export async function initDB() {
     return open({
-        filename: path.join(__dirname, '../dev.sqlite3'),
+        filename: path.join('../dev.sqlite3'),
         driver: sqlite3.Database,
     });
 }
@@ -41,7 +41,7 @@ const upload = multer({
 const app = express();
 app.use('/storage', express.static(path.join(process.cwd(), 'uploads')));
 
-const httpServer = http.createServer(app);
+export const httpServer = http.createServer(app);
 
 const server = new ApolloServer<MyContext>({
     typeDefs,
