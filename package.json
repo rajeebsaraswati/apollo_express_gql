@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "compile": "tsc",
+    "dev": "npm run compile && node ./server.js",
     "start": "npm run compile && node ./dist/index.js",
     "make:migration": "npx knex --knexfile knexfile.cjs migrate:make",
     "migrate": "npx knex --knexfile knexfile.cjs migrate:latest",
