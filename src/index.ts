@@ -14,7 +14,7 @@ import { open, Database } from 'sqlite';
 
 export async function initDB() {
     return open({
-        filename: path.join('../dev.sqlite3'),
+        filename: path.join(process.cwd(), 'dev.sqlite3'),
         driver: sqlite3.Database,
     });
 }
